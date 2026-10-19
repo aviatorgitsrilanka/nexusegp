@@ -36,7 +36,7 @@ python3 -m http.server 8080
 
 ## الروابط المستخدمة
 
-- الدعم والاتصال: `https://t.me/FARISHACKERRR_BOT`
+- الدعم والاتصال: `https://t.me/MEHDIAPK_bot`
 - التسجيل: `https://reffpa.com/L?tag=d_5765768m_69917c_&site=5765768&ad=69917&r=registration`
 - الرمز الترويجي: `RKT555`
 
