@@ -37,7 +37,7 @@ python3 -m http.server 8080
 ## الروابط المستخدمة
 
 - الدعم والاتصال: `https://t.me/MEHDIAPK_bot`
-- التسجيل: `https://reffpa.com/L?tag=d_5765768m_69917c_&site=5765768&ad=69917&r=registration`
+- التسجيل: `https://reffpa.com/L?tag=d_6177028m_18607c_&site=6177028&ad=18607&r=registration`
 - الرمز الترويجي: `RKT555`
 
 توجد صور البطاقات داخل مجلد `assets/` بصيغة WebP وبحجم 600 × 750 بكسل.
