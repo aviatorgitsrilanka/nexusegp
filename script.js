@@ -47,18 +47,18 @@ const STORAGE_KEY = "nexus-interface-state";
 const ACCESS_KEY = "nexus-access-granted";
 const VALID_SCREENS = new Set(["programs", "dashboard", "id", "result"]);
 const tickerEvents = [
-  "محمد — ID 18476235453 +250 USD",
-  "عيسى — ID 18458373641 +120 USD",
-  "أحمد — ID 18490627138 +95 USD",
-  "عمر — ID 18431590762 +310 USD",
-  "خالد — ID 18472816405 +180 USD",
+  "محمد — ID 18476235453 +250 EGP",
+  "عيسى — ID 18458373641 +120 EGP",
+  "أحمد — ID 18490627138 +95 EGP",
+  "عمر — ID 18431590762 +310 EGP",
+  "خالد — ID 18472816405 +180 EGP",
 ];
 const simulatedChatMessages = [
   {
     sender: "user",
     author: "محمد — ID 1847623545",
     avatar: "م",
-    text: "حصلت للتو على 8 إشارات ووضعت رهانات بقيمة 1 USD لكل منها. نتيجتي الآن ربح 344 USD!",
+    text: "حصلت للتو على 8 إشارات ووضعت رهانات بقيمة 1 EGP لكل منها. نتيجتي الآن ربح 344 EGP!",
   },
   {
     sender: "system",
@@ -70,7 +70,7 @@ const simulatedChatMessages = [
     sender: "user",
     author: "عيسى — ID 1845837364",
     avatar: "ع",
-    text: "لم أفهم لماذا يجب أن أبدأ برهان 100 SYP. أليس المبلغ قليلًا جدًا؟",
+    text: "لم أفهم لماذا يجب أن أبدأ برهان 100 EGP. أليس المبلغ قليلًا جدًا؟",
   },
   {
     sender: "system",
@@ -94,7 +94,7 @@ const simulatedChatMessages = [
     sender: "user",
     author: "عمر — ID 1843159076",
     avatar: "ع",
-    text: "هل يمكنني البدء برهان 1 USD؟",
+    text: "هل يمكنني البدء برهان 1 EGP؟",
   },
   {
     sender: "system",
@@ -106,7 +106,7 @@ const simulatedChatMessages = [
     sender: "user",
     author: "خالد — ID 1847281640",
     avatar: "خ",
-    text: "أي عملة يُفضّل استخدامها: USD أم SYP؟",
+    text: "هل يُفضّل استخدام عملة EGP؟",
   },
   {
     sender: "system",
@@ -118,7 +118,7 @@ const simulatedChatMessages = [
     sender: "user",
     author: "يوسف — ID 1844509327",
     avatar: "ي",
-    text: "هل يمكنني البدء بمبلغ 500 SYP فقط؟",
+    text: "هل يمكنني البدء بمبلغ 500 EGP فقط؟",
   },
   {
     sender: "system",
@@ -202,7 +202,7 @@ const simulatedChatMessages = [
     sender: "user",
     author: "زيد — ID 1848640932",
     avatar: "ز",
-    text: "حددت ميزانية يومية قدرها 10 USD. هل هذا مناسب للبدء؟",
+    text: "حددت ميزانية يومية قدرها 10 EGP. هل هذا مناسب للبدء؟",
   },
   {
     sender: "system",
@@ -214,7 +214,7 @@ const simulatedChatMessages = [
     sender: "user",
     author: "طارق — ID 1842468705",
     avatar: "ط",
-    text: "وضعت خمسة رهانات بقيمة 200 SYP وربحت 1800 SYP!",
+    text: "وضعت خمسة رهانات بقيمة 200 EGP وربحت 1800 EGP!",
   },
   {
     sender: "system",
@@ -238,13 +238,13 @@ const simulatedChatMessages = [
     sender: "user",
     author: "رامي — ID 1849753206",
     avatar: "ر",
-    text: "هل يمكن الانتقال من الرهان بـ SYP إلى USD؟",
+    text: "هل يمكن الانتقال من الرهان بعملة أخرى إلى EGP؟",
   },
   {
     sender: "system",
     author: "NEXUS",
     avatar: "N",
-    text: "رامي — ID 1849753206، تحقّق أولًا من إعدادات عملة حسابك. لا يمكن اعتبار مبالغ USD وSYP متساوية.",
+    text: "رامي — ID 1849753206، تحقّق أولًا من إعدادات عملة حسابك وتأكد من استخدام EGP.",
   },
   {
     sender: "user",
@@ -574,7 +574,7 @@ function getAutoReply(message) {
     };
   }
 
-  if (/رهان|syp|usd|مبلغ|ميزانية/.test(normalized)) {
+  if (/رهان|egp|egp|مبلغ|ميزانية/.test(normalized)) {
     return {
       sender: "system",
       author: "NEXUS تلقائي",
